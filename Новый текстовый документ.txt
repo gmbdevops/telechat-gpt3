@@ -1,0 +1,35 @@
+2023-04-08 01:54:47,195 (__init__.py:1083 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Tel
+egram API was unsuccessful. Error code: 400. Description: Bad Request: can't parse reply keyboard markup JSON object"
+2023-04-08 01:54:47,198 (__init__.py:1085 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 1074, in __t
+hreaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 148, in raise_ex
+ceptions
+    raise self.exception_info
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\util.py", line 91, in run
+    task(*args, **kwargs)
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 6428, in _ru
+n_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\andre\PycharmProjects\ChatGPT_telegram_bot\main_telebot_2.py", line 80, in start
+    bot.send_animation(message.chat.id, animation='https://media.giphy.com/media/OnQYRvlj7gCNQdKS5c/giphy.gif',
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\__init__.py", line 2351, in sen
+d_animation
+    apihelper.send_animation(
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 770, in sen
+d_animation
+    return _make_request(token, method_url, params=payload, files=files, method='post')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 162, in _ma
+ke_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python311\Lib\site-packages\telebot\apihelper.py", line 189, in _ch
+eck_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Ba
+d Request: can't parse reply keyboard markup JSON object
+"
